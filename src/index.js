@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
         e.target.classList.add('arrow_bottom');
       }
       let data = Array.from(document.getElementsByTagName('tr')).sort((prev, next) => (prev.dataset.title < next.dataset.title ? -1 : 1));
-      data = clickTitleCount === 2 && data.reverse();
+      data = clickTitleCount === 2 ? data.reverse() : data;
       data.forEach((el) => el.id !== 'base' && data[0].insertAdjacentElement('afterend', el));
     }
   });
