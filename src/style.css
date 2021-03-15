@@ -14,3 +14,19 @@ table {
 td {
   border: 2px solid grey;
 }
+
+tr > td {
+  cursor: default;
+}
+
+tr#base > td {
+  cursor: pointer;
+}
+
+.arrow_top:after {
+  content: '\2191';
+}
+
+.arrow_bottom:after {
+  content: '\2193';
+}
